@@ -78,7 +78,7 @@ class ScrollToTop extends LitElement {
   }
 
   scrollFunction() {
-   // console.log(this.enabled);
+    // console.log(this.enabled);
     if (this.enabled === true) {
       if (
         document.body.scrollTop > this.activatewhen ||
