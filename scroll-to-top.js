@@ -32,62 +32,66 @@ let ScrollToTop = class ScrollToTop extends LitElement {
     }
     render() {
         return html `
-        <style>
+      <style>
+        paper-toast {
+          cursor: pointer;
+        }
 
-          paper-toast {
-            cursor: pointer;
-          }
-          
-          :host {
-            display: block;
-          }
-        
-          .hideToast {
-            display: none;
-            opacity: 0;
-          }
-        
-          .showToast {
-            opacity: 0.9
-          }
-        
-          #toast {
-            height: 50px;
-            width: 100px;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: orange;
-            border-radius: 5%;
-            transition: 0.5s all ease-in-out;
-            z-index: 1000;
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-          }
-        
-          .toast {
-            --paper-toast-background-color: var(--scroll-top-background-color, white);
-            --paper-toast-color: var(--scroll-top-color, black);
-          }
+        :host {
+          display: block;
+        }
 
-          .blue {
-            background-color: blue;
-          }
+        .hideToast {
+          display: none;
+          opacity: 0;
+        }
 
-          .green {
-            background-color: green;
-          }
-        </style>
+        .showToast {
+          opacity: 0.9;
+        }
 
-          <div>Some Stuff</div>
-        <div class=${this.showToast ? "blue" : "green"}>Highlight this!</div>
-                      
-        <paper-toast ?opened=${this.showToast} class="toast" duration="0" @click="${this.topFunction}">
-          <slot>Scroll To Top</slot>
-        </paper-toast>
-  `;
+        #toast {
+          height: 50px;
+          width: 100px;
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background-color: orange;
+          border-radius: 5%;
+          transition: 0.5s all ease-in-out;
+          z-index: 1000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
+
+        .toast {
+          --paper-toast-background-color: var(
+            --scroll-top-background-color,
+            white
+          );
+          --paper-toast-color: var(--scroll-top-color, black);
+        }
+
+        .blue {
+          background-color: blue;
+        }
+
+        .green {
+          background-color: green;
+        }
+      </style>
+
+      <paper-toast
+        ?opened="${this.showToast}"
+        class="toast"
+        duration="0"
+        @click="${this.topFunction}"
+      >
+        <slot>Scroll To Top</slot>
+      </paper-toast>
+    `;
     }
     firstUpdated() {
         // When the user scrolls down XXpx from the top of the document, show the button
@@ -131,3 +135,4 @@ __decorate([
 ScrollToTop = __decorate([
     customElement("scroll-to-top")
 ], ScrollToTop);
+export { ScrollToTop };
