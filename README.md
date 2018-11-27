@@ -24,3 +24,11 @@ Use the activatewhen property to determine when the toast notification is shown.
 ```
 <scroll-to-top activatewhen="400"></scroll-to-top>
 ```
+
+The text displayed by the toast notification can be customised using light DOM nodes as below:
+
+```
+<scroll-to-top>
+  <div slot="text">Move this to the top3</div>
+</scroll-to-top>
+```
