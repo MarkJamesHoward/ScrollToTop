@@ -83,7 +83,7 @@ export class ScrollToTop extends LitElement {
         duration="0"
         @click="${this.topFunction}"
       >
-        <slot>Scroll To Top</slot>
+        <slot name="text">Scroll To Top</slot>
       </paper-toast>
     `;
   }
