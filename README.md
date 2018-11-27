@@ -5,12 +5,14 @@ This Web Component scrolls the page to the top upon clicking the toast notificat
 Import using the below syntax:
 
 ```
-import "scroll-to-top"
+import { ScrollToTop } from "scroll-to-top-wc";
 ```
 
 Then add the element to your page as below:
 
+```
 <scroll-to-top></scroll-top-top>
+```
 
 Use the activatewhen property to determine when the toast notification is shown. This value is in pixels and by default is set to 200. The below
 
