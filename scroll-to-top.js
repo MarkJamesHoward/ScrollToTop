@@ -1,24 +1,43 @@
-import { LitElement, html } from "@polymer/lit-element";
-
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+import { property, LitElement, html, customElement } from "@polymer/lit-element";
+import "@polymer/paper-toast";
 /**
- * `scroll-top-next`
  * scroll to top
  *
  * @customElement
  * @polymer
  * @demo demo/index.html
  */
-class ScrollToTop extends LitElement {
-  constructor() {
-    super();
-
-    this.enabled = true;
-    this.activatewhen = 100;
-  }
-
-  _render(props) {
-    return html`
+let ScrollToTop = class ScrollToTop extends LitElement {
+    /**
+     * scroll to top
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    constructor() {
+        super(...arguments);
+        this.enabledMe = true;
+        this.activatewhen = 200;
+        this.showToast = false;
+    }
+    render() {
+        return html `
         <style>
+
+          paper-toast {
+            cursor: pointer;
+          }
+          
           :host {
             display: block;
           }
@@ -52,70 +71,63 @@ class ScrollToTop extends LitElement {
             --paper-toast-background-color: var(--scroll-top-background-color, white);
             --paper-toast-color: var(--scroll-top-color, black);
           }
+
+          .blue {
+            background-color: blue;
+          }
+
+          .green {
+            background-color: green;
+          }
         </style>
-        
-        <div id="toast" 
-        onclick="${event => this.topFunction()}" 
-        class$="${
-          props.showToast ? "showToast" : "hideToast "
-        }">Scroll Top</div>
-        
-        <!-- <paper-toast class="toast" id="toastButton" duration="0" on-click="topFunction">
-                                <slot></slot>
-                              </paper-toast> -->
+
+          <div>Some Stuff</div>
+        <div class=${this.showToast ? "blue" : "green"}>Highlight this!</div>
+                      
+        <paper-toast ?opened=${this.showToast} class="toast" duration="0" @click="${this.topFunction}">
+          <slot>Scroll To Top</slot>
+        </paper-toast>
   `;
-  }
-  connectedCallback() {
-    super.connectedCallback();
-
-    //console.log("called connected callback");
-    var self = this;
-
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {
-      self.scrollFunction();
-    };
-  }
-
-  scrollFunction() {
-   // console.log(this.enabled);
-    if (this.enabled === true) {
-      if (
-        document.body.scrollTop > this.activatewhen ||
-        document.documentElement.scrollTop > this.activatewhen
-      ) {
-        //console.log("time to show the toast!");
-        this.showToast = true;
-      } else {
-        //console.log("not showing the toast ");
-        this.showToast = false;
-      }
     }
-  }
-
-  //When the user clicks on the button, scroll to the top of the document
-  topFunction() {
-    document.body.scrollTop = 0; // For Chrome, Safari and Opera
-    document.documentElement.scrollTop = 0; // For IE and Firefox
-  }
-
-  static get is() {
-    return "scroll-to-top";
-  }
-
-  static get properties() {
-    return {
-      activatewhen: {
-        type: Number,
-        notify: true
-      },
-      enabled: {
-        type: Boolean,
-        notify: true
-      },
-      showToast: Boolean
-    };
-  }
-}
-
-window.customElements.define(ScrollToTop.is, ScrollToTop);
+    firstUpdated() {
+        // When the user scrolls down XXpx from the top of the document, show the button
+        window.onscroll = this.scrollFunction.bind(this);
+    }
+    scrollFunction() {
+        // console.log(`Enabled3 ${this.enabledMe}`);
+        if (this.enabledMe === true) {
+            // console.log(document.body.scrollTop);
+            // console.log(`active when ${this.activatewhen}`);
+            if (document.body.scrollTop > this.activatewhen ||
+                document.documentElement.scrollTop > this.activatewhen) {
+                // console.log("time to show the toast!");
+                this.showToast = true;
+            }
+            else {
+                // console.log("not showing the toast ");
+                this.showToast = false;
+            }
+        }
+    }
+    //When the user clicks on the button, scroll to the top of the document
+    topFunction() {
+        console.log("called top function");
+        document.body.scrollTop = 0; // For Chrome, Safari and Opera
+        document.documentElement.scrollTop = 0; // For IE and Firefox
+    }
+};
+__decorate([
+    property(),
+    __metadata("design:type", Boolean)
+], ScrollToTop.prototype, "enabledMe", void 0);
+__decorate([
+    property(),
+    __metadata("design:type", Number)
+], ScrollToTop.prototype, "activatewhen", void 0);
+__decorate([
+    property(),
+    __metadata("design:type", Boolean)
+], ScrollToTop.prototype, "showToast", void 0);
+ScrollToTop = __decorate([
+    customElement("scroll-to-top")
+], ScrollToTop);
