@@ -1,21 +1,17 @@
 # \<scroll-to-top\>
 
-scroll page up
+This Web Component scrolls the page to the top upon clicking the toast notification. The notification will display once a certain scroll depth is reached and remain visible from this point onwards. For very long pages this is a quick shorcut to the top of the page rather than having to use the scroll bar which can be cumbersome.
 
-## Install the Polymer-CLI
-
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) and npm (packaged with [Node.js](https://nodejs.org)) installed. Run `npm install` to install your element's dependencies, then run `polymer serve` to serve your element locally.
-
-## Viewing Your Element
+Import using the below syntax:
 
 ```
-$ polymer serve
+import "scroll-to-top"
 ```
 
-## Running Tests
+Then add the element to your page as below:
 
-```
-$ polymer test
-```
+<scroll-to-top></scroll-top-top>
 
-Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
+Use the activatewhen property to determine when the toast notification is shown. This value is in pixels and by default is set to 200. The below
+
+<scroll-to-top activatewhen="400"></scroll-top-top>

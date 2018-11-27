@@ -4,7 +4,7 @@ import {
   html,
   customElement
 } from "@polymer/lit-element";
-import "@polymer/paper-toast";
+//import "@polymer/paper-toast";
 
 /**
  * scroll to top
