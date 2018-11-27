@@ -33,6 +33,11 @@ let ScrollToTop = class ScrollToTop extends LitElement {
     render() {
         return html `
         <style>
+
+          paper-toast {
+            cursor: pointer;
+          }
+          
           :host {
             display: block;
           }

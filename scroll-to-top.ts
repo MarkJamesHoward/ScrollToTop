@@ -27,6 +27,11 @@ class ScrollToTop extends LitElement {
   render() {
     return html`
         <style>
+
+          paper-toast {
+            cursor: pointer;
+          }
+          
           :host {
             display: block;
           }
@@ -69,10 +74,7 @@ class ScrollToTop extends LitElement {
             background-color: green;
           }
         </style>
-
-          <div>Some Stuff</div>
-        <div class=${this.showToast ? "blue" : "green"}>Highlight this!</div>
-                      
+                     
         <paper-toast ?opened=${
           this.showToast
         } class="toast" duration="0" @click="${this.topFunction}">
