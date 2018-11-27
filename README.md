@@ -1,13 +1,14 @@
 # \<scroll-to-top\>
 
 This Web Component scrolls the page to the top upon clicking the toast notification. The notification will display once a certain scroll depth is reached and remain visible from this point onwards. For very long pages this is a quick shorcut to the top of the page rather than having to use the scroll bar which can be cumbersome.
-##Install with
+
+###Install with
 
 ```
 npm i scroll-to-top-wc
 ```
 
-##Import using the below syntax:
+###Import using the below syntax:
 
 ```
 import { ScrollToTop } from "scroll-to-top-wc";
