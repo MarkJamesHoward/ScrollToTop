@@ -2,9 +2,21 @@
   "name": "scroll-to-top-wc",
   "version": "0.1.19",
   "description": "scroll page up",
-  "main": "scroll-to-top.js",
+  "main": "./src/scroll-to-top.js",
   "scripts": {
     "view": "polymer serve"
+  },
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-standard-pkg",
+        {
+          "exclude": [
+            "__tests__/**/*"
+          ]
+        }
+      ]
+    ]
   },
   "repository": {
     "type": "git",
@@ -16,6 +28,7 @@
     "@polymer/polymer": "^3.1.0"
   },
   "devDependencies": {
+    "@pika/plugin-standard-pkg": "^0.3.15",
     "@polymer/iron-demo-helpers": "^3.0.2",
     "ts-loader": "^5.3.0",
     "typescript": "^3.1.6",

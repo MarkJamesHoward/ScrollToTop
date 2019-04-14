@@ -1,7 +1,7 @@
 {
   "npm": true,
   "moduleResolution": "node",
-  "entrypoint": "scroll-to-top.js",
+  "entrypoint": "./src/scroll-to-top.js",
   "builds": [
     {
       "name": "mybuild",
