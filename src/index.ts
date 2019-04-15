@@ -1,9 +1,4 @@
-import {
-  property,
-  LitElement,
-  html,
-  customElement
-} from "@polymer/lit-element";
+import { property, LitElement, html, customElement } from "lit-element";
 import "@polymer/paper-toast";
 
 /**
@@ -13,7 +8,7 @@ import "@polymer/paper-toast";
  * @polymer
  * @demo demo/index.html
  */
-@customElement("scroll-to-top" as any)
+@customElement("scroll-to-top")
 export class ScrollToTop extends LitElement {
   @property()
   enabledMe: Boolean = true;
@@ -61,10 +56,7 @@ export class ScrollToTop extends LitElement {
         }
 
         .toast {
-          --paper-toast-background-color: var(
-            --scroll-top-background-color,
-            white
-          );
+          --paper-toast-background-color: var(--scroll-top-background-color, white);
           --paper-toast-color: var(--scroll-top-color, black);
         }
 

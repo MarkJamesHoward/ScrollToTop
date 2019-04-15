@@ -67,7 +67,10 @@ let ScrollToTop = class ScrollToTop extends LitElement {
         }
 
         .toast {
-          --paper-toast-background-color: var(--scroll-top-background-color, white);
+          --paper-toast-background-color: var(
+            --scroll-top-background-color,
+            white
+          );
           --paper-toast-color: var(--scroll-top-color, black);
         }
 
