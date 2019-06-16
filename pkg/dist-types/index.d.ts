@@ -11,7 +11,7 @@ export declare class ScrollToTop extends LitElement {
     enabledMe: Boolean;
     activatewhen: Number;
     showToast: Boolean;
-    render(): import("lit-element/node_modules/lit-html/lib/template-result").TemplateResult;
+    render(): import("lit-element").TemplateResult;
     firstUpdated(): void;
     scrollFunction(): void;
     topFunction(): void;
