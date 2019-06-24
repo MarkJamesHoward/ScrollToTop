@@ -1,4 +1,4 @@
-import { property, LitElement, html, customElement } from "lit-element";
+import { property, LitElement, html, customElement } from "/web_modules/lit-element.js";
 import "@polymer/paper-toast";
 
 /**
