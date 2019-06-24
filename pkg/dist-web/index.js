@@ -1,4 +1,4 @@
-import { LitElement, html, property, customElement } from 'lit-element';
+import { LitElement, html, property, customElement } from '../../../../web_modules/lit-element';
 import '@polymer/paper-toast';
 
 function _taggedTemplateLiteral(strings, raw) {
@@ -33,7 +33,7 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
 
 var __metadata = undefined && undefined.__metadata || function (k, v) {
   if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
+}; //@ts-ignore
 /**
  * scroll to top
  *

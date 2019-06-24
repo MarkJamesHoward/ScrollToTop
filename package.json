@@ -21,12 +21,12 @@
     "url": "https://github.com/markjameshoward/scrolltotop"
   },
   "dependencies": {
-    "@pika/web": "^0.4.3",
     "@polymer/paper-toast": "^3.0.1",
     "@polymer/polymer": "^3.3.0",
     "lit-element": "^2.2.0"
   },
   "devDependencies": {
+    "@pika/web": "^0.4.3",
     "@pika/plugin-build-web": "^0.4.0",
     "@pika/plugin-ts-standard-pkg": "^0.4.0",
     "@polymer/iron-demo-helpers": "^3.1.0",

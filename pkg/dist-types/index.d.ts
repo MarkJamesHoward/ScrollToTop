@@ -1,4 +1,4 @@
-import { LitElement } from "lit-element";
+import { LitElement } from "/web_modules/lit-element";
 import "@polymer/paper-toast";
 /**
  * scroll to top
@@ -11,7 +11,7 @@ export declare class ScrollToTop extends LitElement {
     enabledMe: Boolean;
     activatewhen: Number;
     showToast: Boolean;
-    render(): import("lit-element").TemplateResult;
+    render(): any;
     firstUpdated(): void;
     scrollFunction(): void;
     topFunction(): void;
