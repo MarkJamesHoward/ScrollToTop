@@ -1,6 +1,6 @@
 {
   "name": "scroll-to-top-wc",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "scroll page up",
   "main": "src/index.ts",
   "scripts": {
