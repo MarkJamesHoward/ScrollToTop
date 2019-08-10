@@ -1,5 +1,4 @@
-import { LitElement, html, property, customElement } from '../../../../web_modules/lit-element';
-import '@polymer/paper-toast';
+import { LitElement, html, property, customElement } from '../../../../web_modules/lit-element.js';
 
 function _taggedTemplateLiteral(strings, raw) {
   if (!raw) {

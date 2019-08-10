@@ -1,5 +1,4 @@
-import { LitElement } from "/web_modules/lit-element";
-import "@polymer/paper-toast";
+import { LitElement } from "/web_modules/lit-element.js";
 /**
  * scroll to top
  *

@@ -1,6 +1,6 @@
 //@ts-ignore
-import { property, LitElement, html, customElement } from "/web_modules/lit-element";
-import "@polymer/paper-toast";
+import { property, LitElement, html, customElement } from "/web_modules/lit-element.js";
+import {PaperToastElement} from "@polymer/paper-toast";
 
 /**
  * scroll to top
@@ -21,6 +21,7 @@ export class ScrollToTop extends LitElement {
   showToast: Boolean = false;
 
   render() {
+    
     return html`
       <style>
         paper-toast {
