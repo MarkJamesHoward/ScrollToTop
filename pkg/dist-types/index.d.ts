@@ -1,4 +1,4 @@
-import { LitElement } from "/web_modules/lit-element.js";
+import { LitElement } from "lit-element.js";
 /**
  * scroll to top
  *
