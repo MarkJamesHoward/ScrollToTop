@@ -5,8 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "version": "npx @pika/pack",
-    "view": "polymer serve",
-    "version": "npx @pika/pack"
+    "view": "polymer serve"
   },
   "@pika/pack": {
     "pipeline": [
