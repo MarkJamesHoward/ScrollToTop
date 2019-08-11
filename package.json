@@ -4,7 +4,9 @@
   "description": "scroll page up",
   "main": "src/index.ts",
   "scripts": {
-    "view": "polymer serve"
+    "version": "npx @pika/pack",
+    "view": "polymer serve",
+    "version": "npx @pika/pack"
   },
   "@pika/pack": {
     "pipeline": [
