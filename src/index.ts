@@ -1,5 +1,5 @@
 //@ts-ignore
-import { property, LitElement, html, customElement } from "lit-element.js";
+import { property, LitElement, html, customElement } from "lit-element";
 import {PaperToastElement} from "@polymer/paper-toast";
 
 /**
