@@ -1,4 +1,4 @@
-import { LitElement } from "lit-element.js";
+import { LitElement } from "lit-element";
 /**
  * scroll to top
  *
@@ -10,7 +10,7 @@ export declare class ScrollToTop extends LitElement {
     enabledMe: Boolean;
     activatewhen: Number;
     showToast: Boolean;
-    render(): any;
+    render(): import("lit-element").TemplateResult;
     firstUpdated(): void;
     scrollFunction(): void;
     topFunction(): void;
