@@ -11,7 +11,7 @@ npm i scroll-to-top-wc
 ## Import using the below syntax:
 
 ```
-import { ScrollToTop } from "scroll-to-top-wc";
+import "scroll-to-top-wc";
 ```
 
 ## Then add the element to your page as below:
@@ -23,7 +23,7 @@ import { ScrollToTop } from "scroll-to-top-wc";
 Use the activatewhen property to determine when the toast notification is shown. This value is in pixels and by default is set to 200. The below will mean we need to scroll down twice as far before the toast notification is shown
 
 ```
-<scroll-to-top activatewhen="400"></scroll-to-top>
+<scroll-to-top-wc activatewhen="400"></scroll-to-top-wc>
 ```
 
 ### Customize Display Text
@@ -31,9 +31,9 @@ Use the activatewhen property to determine when the toast notification is shown.
 The text displayed by the toast notification can be customised using light DOM nodes as below. Note that we need to specify SLOT='TEXT' for the node that will display the text on the toast notification
 
 ```
-<scroll-to-top>
+<scroll-to-top-wc>
   <div slot="text">Move this to the top3</div>
-</scroll-to-top>
+</scroll-to-top-wc>
 ```
 
 ### Smooth Scrolling:

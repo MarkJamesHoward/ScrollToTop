@@ -1,7 +1,7 @@
 {
   "name": "scroll-to-top-wc",
   "description": "scroll page up",
-  "version": "0.2.12",
+  "version": "0.2.13",
   "files": [
     "dist-*/",
     "bin/"
