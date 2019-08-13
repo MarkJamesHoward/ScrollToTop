@@ -131,6 +131,6 @@ __decorate([
     __metadata("design:type", Boolean)
 ], ScrollToTop.prototype, "showToast", void 0);
 ScrollToTop = __decorate([
-    customElement("scroll-to-top")
+    customElement("scroll-to-top-wc")
 ], ScrollToTop);
 export { ScrollToTop };
