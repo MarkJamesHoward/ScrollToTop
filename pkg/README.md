@@ -33,3 +33,5 @@ The text displayed by the toast notification can be customised using light DOM n
   <div slot="text">Move this to the top3</div>
 </scroll-to-top>
 ```
+
+This package was created using [@Pika/Pack](https://www.pika.dev/blog/introducing-pika-pack/)which allows us to publish both an ES5 compatible bundle for use in older projects, and also an ES6 package that can be used in newer projects that utilze modules.

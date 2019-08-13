@@ -34,4 +34,13 @@ The text displayed by the toast notification can be customised using light DOM n
 </scroll-to-top>
 ```
 
+Smooth Scrolling:
+In order for the page to scroll to the top in a smooth fasion you will need to apply the below CSS to the document body:
+```
+scroll-behavior: smooth;
+```
+
+Package Creation:
 This package was created using [@Pika/Pack](https://www.pika.dev/blog/introducing-pika-pack/)which allows us to publish both an ES5 compatible bundle for use in older projects, and also an ES6 package that can be used in newer projects that utilze modules.
+
+
