@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 //@ts-ignore
 import { property, LitElement, html, customElement } from "lit-element";
+import "@polymer/paper-toast";
 /**
  * scroll to top
  *

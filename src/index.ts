@@ -1,6 +1,6 @@
 //@ts-ignore
 import { property, LitElement, html, customElement } from "lit-element";
-import {PaperToastElement} from "@polymer/paper-toast";
+import  "@polymer/paper-toast";
 
 /**
  * scroll to top

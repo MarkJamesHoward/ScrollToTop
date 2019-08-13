@@ -1,4 +1,5 @@
 import { LitElement } from "lit-element";
+import "@polymer/paper-toast";
 /**
  * scroll to top
  *
