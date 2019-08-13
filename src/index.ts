@@ -1,6 +1,6 @@
 //@ts-ignore
 import { property, LitElement, html, customElement } from "lit-element";
-import  "@polymer/paper-toast";
+import "@polymer/paper-toast";
 
 /**
  * scroll to top
@@ -9,7 +9,7 @@ import  "@polymer/paper-toast";
  * @polymer
  * @demo demo/index.html
  */
-@customElement("scroll-to-top")
+@customElement("scroll-to-top-wc")
 export class ScrollToTop extends LitElement {
   @property()
   enabledMe: Boolean = true;
@@ -21,7 +21,6 @@ export class ScrollToTop extends LitElement {
   showToast: Boolean = false;
 
   render() {
-    
     return html`
       <style>
         paper-toast {

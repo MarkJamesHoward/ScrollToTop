@@ -2,4 +2,5 @@
 /demo/.cache
 /demo/dist
 /pkg
+.parcel-cache
 
