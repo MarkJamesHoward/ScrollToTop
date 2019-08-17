@@ -20,6 +20,8 @@ import "scroll-to-top-wc";
 <scroll-to-top-wc></scroll-to-top-wc>
 ```
 
+### Activate When
+
 Use the activatewhen property to determine when the toast notification is shown. This value is in pixels and by default is set to 200. The below will mean we need to scroll down twice as far before the toast notification is shown
 
 ```
