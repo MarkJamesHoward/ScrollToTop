@@ -1,6 +1,5 @@
 //@ts-ignore
 import { property, LitElement, html, customElement } from "lit-element";
-import "@polymer/paper-toast";
 
 /**
  * scroll to top
@@ -70,14 +69,14 @@ export class ScrollToTop extends LitElement {
         }
       </style>
 
-      <paper-toast
+      <div
         ?opened="${this.showToast}"
         class="toast"
         duration="0"
         @click="${this.topFunction}"
       >
         <slot name="text">Scroll To Top</slot>
-      </paper-toast>
+      </div>
     `;
   }
 
