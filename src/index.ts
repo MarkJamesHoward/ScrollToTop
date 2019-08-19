@@ -4,7 +4,7 @@ import {
   html,
   customElement
   //@ts-ignore
-} from "../web_modules/lit-element.js";
+} from "/web_modules/lit-element.js";
 
 /**
  * scroll to top
@@ -47,10 +47,7 @@ export class ScrollToTop extends LitElement {
         }
 
         .toast {
-          --paper-toast-background-color: var(
-            --scroll-top-background-color,
-            white
-          );
+          --paper-toast-background-color: var(--scroll-top-background-color, white);
           --paper-toast-color: var(--scroll-top-color, black);
         }
 
