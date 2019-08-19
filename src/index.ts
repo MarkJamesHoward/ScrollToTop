@@ -22,21 +22,13 @@ export class ScrollToTop extends LitElement {
   render() {
     return html`
       <style>
-        paper-toast {
-          cursor: pointer;
+        :host {
+          position: fixed;
+          bottom: 20px;
         }
 
         :host {
           display: block;
-        }
-
-        .hideToast {
-          display: none;
-          opacity: 0;
-        }
-
-        .showToast {
-          opacity: 0.9;
         }
 
         #toast {
@@ -67,15 +59,30 @@ export class ScrollToTop extends LitElement {
         .green {
           background-color: green;
         }
+
+        .showToast {
+          display: block;
+        }
+
+        .hideToast {
+          display: none;
+        }
+
+        .showToast,
+        .hideToast {
+          cursor: pointer;
+          padding: 1rem;
+          border-radius: 1rem;
+          opacity: 0.9;
+        }
       </style>
 
       <div
-        ?opened="${this.showToast}"
-        class="toast"
-        duration="0"
+        class="${this.showToast ? "showToast" : "hideToast"}"
         @click="${this.topFunction}"
+        style="background: purple;"
       >
-        <slot name="text">Scroll To Top</slot>
+        <slot name="text">Top</slot>
       </div>
     `;
   }
@@ -86,7 +93,7 @@ export class ScrollToTop extends LitElement {
   }
 
   scrollFunction() {
-    // console.log(`Enabled3 ${this.enabledMe}`);
+    console.log(`Enabled3 ${this.enabledMe}`);
     if (this.enabledMe === true) {
       // console.log(document.body.scrollTop);
       // console.log(`active when ${this.activatewhen}`);
@@ -94,7 +101,7 @@ export class ScrollToTop extends LitElement {
         document.body.scrollTop > this.activatewhen ||
         document.documentElement.scrollTop > this.activatewhen
       ) {
-        // console.log("time to show the toast!");
+        //console.log("time to show the toast!");
         this.showToast = true;
       } else {
         // console.log("not showing the toast ");
