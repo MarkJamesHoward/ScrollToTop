@@ -59,6 +59,17 @@ The element displayed for allowing the scroll to take place can be styled using 
 
 Any other CSS properties can be changed within this selector.
 
+
+### UNPKG
+
+To include this component via Unpkg please use one of the below links:
+
+## Web optimsed version
+[UnPkg Link](https://unpkg.com/scroll-to-top-wc@latest/dist-web/index.js)
+
+## ES2019 version
+[UnPkg Link](https://unpkg.com/scroll-to-top-wc@latest/dist-src/index.js)
+
 ### Package Creation:
 
 This package was created using [@Pika/Pack](https://www.pika.dev/blog/introducing-pika-pack/). So we have an unbundled ES2018 and Web optimised versions in the repository. Within the package.json there is a 'module' entry that points to the web optimsed version which should be picked up by bundlers such as Rollup, webpack, parcel etc.
