@@ -9,6 +9,12 @@
 
     <title>scroll-to-top demo</title>
     <style>
+
+      scroll-to-top-wc::part(container) {
+        background: blue;
+        border: 5px solid black;
+      }
+
       .container1 {
         height: 50vh;
         background: orange;
@@ -45,7 +51,7 @@
       <div class="container2"></div>
       <div class="container3"></div>
       <div class="container4"></div>
-      <scroll-to-top-wc activateWhen="500" enableMe="false"></scroll-to-top-wc>
+      <scroll-to-top-wc activateWhen="500"></scroll-to-top-wc>
     </div>
   </body>
 </html>
