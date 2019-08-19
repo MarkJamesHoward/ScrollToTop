@@ -46,6 +46,19 @@ In order for the page to scroll to the top in a smooth fasion you will need to a
 scroll-behavior: smooth;
 ```
 
+### Styling
+
+The element displayed for allowing the scroll to take place can be styled using CSS Shadow Parts. The component exposes the top level DIV element with the part of 'container'. So the below code can be used to change the background and border:
+
+```
+ scroll-to-top-wc::part(container) {
+        background: blue;
+        border: 5px solid black;
+      }
+```
+
+Any other CSS properties can be changed within this selector.
+
 ### Package Creation:
 
 This package was created using [@Pika/Pack](https://www.pika.dev/blog/introducing-pika-pack/). So we have an unbundled ES2018 and Web optimised versions in the repository. Within the package.json there is a 'module' entry that points to the web optimsed version which should be picked up by bundlers such as Rollup, webpack, parcel etc.

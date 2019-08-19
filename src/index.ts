@@ -11,9 +11,6 @@ import { property, LitElement, html, customElement } from "lit-element";
 @customElement("scroll-to-top-wc")
 export class ScrollToTop extends LitElement {
   @property()
-  enabledMe: Boolean = true;
-
-  @property()
   activatewhen: Number = 200;
 
   @property()
@@ -48,7 +45,10 @@ export class ScrollToTop extends LitElement {
         }
 
         .toast {
-          --paper-toast-background-color: var(--scroll-top-background-color, white);
+          --paper-toast-background-color: var(
+            --scroll-top-background-color,
+            white
+          );
           --paper-toast-color: var(--scroll-top-color, black);
         }
 
@@ -78,6 +78,7 @@ export class ScrollToTop extends LitElement {
       </style>
 
       <div
+        part="container"
         class="${this.showToast ? "showToast" : "hideToast"}"
         @click="${this.topFunction}"
         style="background: purple;"
@@ -93,20 +94,15 @@ export class ScrollToTop extends LitElement {
   }
 
   scrollFunction() {
-    console.log(`Enabled3 ${this.enabledMe}`);
-    if (this.enabledMe === true) {
-      // console.log(document.body.scrollTop);
-      // console.log(`active when ${this.activatewhen}`);
-      if (
-        document.body.scrollTop > this.activatewhen ||
-        document.documentElement.scrollTop > this.activatewhen
-      ) {
-        //console.log("time to show the toast!");
-        this.showToast = true;
-      } else {
-        // console.log("not showing the toast ");
-        this.showToast = false;
-      }
+    if (
+      document.body.scrollTop > this.activatewhen ||
+      document.documentElement.scrollTop > this.activatewhen
+    ) {
+      //console.log("time to show the toast!");
+      this.showToast = true;
+    } else {
+      // console.log("not showing the toast ");
+      this.showToast = false;
     }
   }
 
