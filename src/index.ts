@@ -1,5 +1,10 @@
-//@ts-ignore
-import { property, LitElement, html, customElement } from "lit-element";
+import {
+  property,
+  LitElement,
+  html,
+  customElement
+  //@ts-ignore
+} from "../web_modules/lit-element.js";
 
 /**
  * scroll to top
@@ -22,9 +27,6 @@ export class ScrollToTop extends LitElement {
         :host {
           position: fixed;
           bottom: 20px;
-        }
-
-        :host {
           display: block;
         }
 
