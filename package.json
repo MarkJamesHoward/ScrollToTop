@@ -3,6 +3,9 @@
   "version": "0.2.19",
   "description": "scroll page up",
   "main": "src/index.ts",
+  "browserslist": [
+    "Chrome > 70  "
+  ],
   "scripts": {
     "version": "npx @pika/pack",
     "view": "polymer serve"

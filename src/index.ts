@@ -1,6 +1,5 @@
 //@ts-ignore
 import { property, LitElement, html, customElement } from "lit-element";
-import "@polymer/paper-toast";
 
 /**
  * scroll to top
@@ -23,21 +22,17 @@ export class ScrollToTop extends LitElement {
   render() {
     return html`
       <style>
+        :host {
+          position: fixed;
+          bottom: 20px;
+        }
+
         paper-toast {
           cursor: pointer;
         }
 
         :host {
           display: block;
-        }
-
-        .hideToast {
-          display: none;
-          opacity: 0;
-        }
-
-        .showToast {
-          opacity: 0.9;
         }
 
         #toast {
@@ -68,16 +63,31 @@ export class ScrollToTop extends LitElement {
         .green {
           background-color: green;
         }
+
+        .showToast {
+          display: block;
+        }
+
+        .hideToast {
+          display: none;
+        }
+
+        .showToast,
+        .hideToast {
+          cursor: pointer;
+          padding: 1rem;
+          border-radius: 1rem;
+          opacity: 0.9;
+        }
       </style>
 
-      <paper-toast
-        ?opened="${this.showToast}"
-        class="toast"
-        duration="0"
+      <div
+        class="${this.showToast ? "showToast" : "hideToast"}"
         @click="${this.topFunction}"
+        style="background: purple;"
       >
-        <slot name="text">Scroll To Top</slot>
-      </paper-toast>
+        <slot name="text">Top</slot>
+      </div>
     `;
   }
 
@@ -95,7 +105,7 @@ export class ScrollToTop extends LitElement {
         document.body.scrollTop > this.activatewhen ||
         document.documentElement.scrollTop > this.activatewhen
       ) {
-        // console.log("time to show the toast!");
+        console.log("time to show the toast!");
         this.showToast = true;
       } else {
         // console.log("not showing the toast ");
