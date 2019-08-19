@@ -27,10 +27,6 @@ export class ScrollToTop extends LitElement {
           bottom: 20px;
         }
 
-        paper-toast {
-          cursor: pointer;
-        }
-
         :host {
           display: block;
         }
@@ -97,7 +93,7 @@ export class ScrollToTop extends LitElement {
   }
 
   scrollFunction() {
-    // console.log(`Enabled3 ${this.enabledMe}`);
+    console.log(`Enabled3 ${this.enabledMe}`);
     if (this.enabledMe === true) {
       // console.log(document.body.scrollTop);
       // console.log(`active when ${this.activatewhen}`);
@@ -105,7 +101,7 @@ export class ScrollToTop extends LitElement {
         document.body.scrollTop > this.activatewhen ||
         document.documentElement.scrollTop > this.activatewhen
       ) {
-        console.log("time to show the toast!");
+        //console.log("time to show the toast!");
         this.showToast = true;
       } else {
         // console.log("not showing the toast ");
