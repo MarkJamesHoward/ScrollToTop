@@ -46,19 +46,6 @@ export class ScrollToTop extends LitElement {
           cursor: pointer;
         }
 
-        .toast {
-          --paper-toast-background-color: var(--scroll-top-background-color, white);
-          --paper-toast-color: var(--scroll-top-color, black);
-        }
-
-        .blue {
-          background-color: blue;
-        }
-
-        .green {
-          background-color: green;
-        }
-
         .showToast {
           display: block;
         }
@@ -69,6 +56,8 @@ export class ScrollToTop extends LitElement {
 
         .showToast,
         .hideToast {
+          background-color: var(--scroll-top-background-color, white);
+          color: var(--scroll-top-color, black);
           cursor: pointer;
           padding: 1rem;
           border-radius: 1rem;
@@ -80,7 +69,6 @@ export class ScrollToTop extends LitElement {
         part="container"
         class="${this.showToast ? "showToast" : "hideToast"}"
         @click="${this.topFunction}"
-        style="background: purple;"
       >
         <slot name="text">Top</slot>
       </div>

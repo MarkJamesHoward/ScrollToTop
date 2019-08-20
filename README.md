@@ -48,7 +48,7 @@ scroll-behavior: smooth;
 
 ### Styling
 
-The element displayed for allowing the scroll to take place can be styled using CSS Shadow Parts. The component exposes the top level DIV element with the part of 'container'. So the below code can be used to change the background and border:
+The component can be styled using CSS Shadow Parts. The part 'container' can be selected to allow any CSS to be applied as shown in the below example:
 
 ```
  scroll-to-top-wc::part(container) {
@@ -57,17 +57,23 @@ The element displayed for allowing the scroll to take place can be styled using 
       }
 ```
 
-Any other CSS properties can be changed within this selector.
+For browsers that do not support CSS Shadow Parts, the below CSS Custom Properties can be set to style a limited part of the component:
 
+```
+--scroll-top-background-color
+--scroll-top-color
+```
 
 ### UNPKG
 
 To include this component via Unpkg please use one of the below links:
 
 ## Web optimsed version
+
 [UnPkg Link](https://unpkg.com/scroll-to-top-wc@latest/dist-web/index.js)
 
 ## ES2019 version
+
 [UnPkg Link](https://unpkg.com/scroll-to-top-wc@latest/dist-src/index.js)
 
 ### Package Creation:
