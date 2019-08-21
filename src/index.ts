@@ -6,13 +6,6 @@ import {
   //@ts-ignore
 } from "/web_modules/lit-element.js";
 
-/**
- * scroll to top
- *
- * @customElement
- * @polymer
- * @demo demo/index.html
- */
 @customElement("scroll-to-top-wc")
 export class ScrollToTop extends LitElement {
   @property()

@@ -6,14 +6,11 @@
   "browserslist": [
     "Chrome > 70  "
   ],
-  "scripts": {
-    "version": "npx @pika/pack",
-    "view": "polymer serve"
-  },
+  "scripts": {},
   "@pika/pack": {
     "pipeline": [
       [
-        "@pika/plugin-ts-standard-pkg"
+        "@pika/plugin-tsp-standard-pkg"
       ],
       [
         "@pika/plugin-build-web"
@@ -32,9 +29,9 @@
     "@pika/pack": "^0.5.0",
     "@pika/plugin-build-web": "^0.6.0",
     "@pika/plugin-bundle-web": "^0.6.0",
+    "@pika/plugin-standard-pkg": "^0.6.0",
     "@pika/plugin-ts-standard-pkg": "^0.6.0",
-    "@pika/web": "^0.5.1",
-    "pika-plugin-minify": "^0.1.0",
+    "@pika/web": "^0.5.3",
     "typescript": "^3.5.3"
   }
 }
