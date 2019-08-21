@@ -17,9 +17,6 @@
       ],
       [
         "@pika/plugin-build-web"
-      ],
-      [
-        "@pika/plugin-bundle-web"
       ]
     ]
   },
@@ -37,6 +34,7 @@
     "@pika/plugin-bundle-web": "^0.6.0",
     "@pika/plugin-ts-standard-pkg": "^0.6.0",
     "@pika/web": "^0.5.1",
+    "pika-plugin-minify": "^0.1.0",
     "typescript": "^3.5.3"
   }
 }
