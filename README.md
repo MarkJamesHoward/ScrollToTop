@@ -94,11 +94,11 @@ parcel index.html
 
 To include this component via Unpkg please use one of the below links:
 
-## Web optimsed version
+#### Web optimsed version
 
 [UnPkg Link](https://unpkg.com/scroll-to-top-wc@latest/dist-web/index.js)
 
-## ES2019 version
+#### ES2019 version
 
 [UnPkg Link](https://unpkg.com/scroll-to-top-wc@latest/dist-src/index.js)
 
