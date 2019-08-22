@@ -4,7 +4,7 @@ import {
   html,
   customElement
   //@ts-ignore
-} from "/web_modules/lit-element.js";
+} from "lit-element";
 
 @customElement("scroll-to-top-wc")
 export class ScrollToTop extends LitElement {
