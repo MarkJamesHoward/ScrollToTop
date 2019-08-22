@@ -78,17 +78,13 @@ install dependencies
 npm install
 ```
 
-Build the package
+Then open the 'index.html' in the demo folder using parcel
 
 ```
-npx pika build
-```
-
-Then open the 'index.html' in the demo folder using something like 'live server' or 'http-server'. No need to use a bundler as the code is pre-bundled via [Pika/Web](https://www.pika.dev/blog/pika-web-a-future-without-webpack/) (internally by [Rollup](https://rollupjs.org/)). That said you can use a bundler if you like, and the below with parcel is nice and easy
-
 npm i -g parcel
 cd \demo
 parcel index.html
+```
 
 ### UNPKG
 
