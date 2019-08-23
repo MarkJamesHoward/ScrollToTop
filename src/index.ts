@@ -57,7 +57,7 @@ export class ScrollToTop extends LitElement {
           opacity: 0.9;
         }
       </style>
-
+      
       <div
         part="container"
         class="${this.showToast ? "showToast" : "hideToast"}"
@@ -67,6 +67,7 @@ export class ScrollToTop extends LitElement {
       </div>
     `;
   }
+
 
   firstUpdated() {
     // When the user scrolls down XXpx from the top of the document, show the button
