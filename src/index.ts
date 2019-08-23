@@ -57,7 +57,7 @@ export class ScrollToTop extends LitElement {
           opacity: 0.9;
         }
       </style>
-      
+
       <div
         part="container"
         class="${this.showToast ? "showToast" : "hideToast"}"
@@ -67,7 +67,6 @@ export class ScrollToTop extends LitElement {
       </div>
     `;
   }
-
 
   firstUpdated() {
     // When the user scrolls down XXpx from the top of the document, show the button
@@ -90,7 +89,6 @@ export class ScrollToTop extends LitElement {
   //When the user clicks on the button, scroll to the top of the document
   topFunction() {
     console.log("called top function");
-    document.body.scrollTop = 0; // For Chrome, Safari and Opera
-    document.documentElement.scrollTop = 0; // For IE and Firefox
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 }
