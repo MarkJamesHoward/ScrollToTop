@@ -6,7 +6,9 @@
   "browserslist": [
     "Chrome > 70  "
   ],
-  "scripts": {},
+  "scripts": {
+    "version": "npx @pika/pack"
+  },
   "@pika/pack": {
     "pipeline": [
       [
