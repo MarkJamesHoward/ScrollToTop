@@ -24,6 +24,18 @@
   "dependencies": {
     "lit-element": "^2.2.1"
   },
+  "keywords": [
+    "scroll",
+    "top",
+    "scrolltop",
+    "scroll to top",
+    "scroll top",
+    "scroll up",
+    "move to top",
+    "move top",
+    "scrollTo",
+    "smooth scroll"
+  ],
   "devDependencies": {
     "@pika/cli": "^0.2.0",
     "@pika/pack": "^0.5.0",
