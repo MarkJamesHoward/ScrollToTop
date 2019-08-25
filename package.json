@@ -1,6 +1,6 @@
 {
   "name": "scroll-to-top-wc",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "scroll page up",
   "main": "src/index.ts",
   "browserslist": [
@@ -12,7 +12,7 @@
   "@pika/pack": {
     "pipeline": [
       [
-        "@pika/plugin-tsp-standard-pkg"
+        "@pika/plugin-ts-standard-pkg"
       ],
       [
         "@pika/plugin-build-web"
