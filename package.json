@@ -3,6 +3,7 @@
   "version": "0.3.8",
   "description": "scroll page up",
   "main": "src/index.ts",
+  "license": "MIT",
   "browserslist": [
     "Chrome > 70  "
   ],
