@@ -1,6 +1,6 @@
 {
   "name": "scroll-to-top-wc",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "description": "scroll page up",
   "main": "src/index.ts",
   "license": "MIT",
