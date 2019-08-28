@@ -89,7 +89,6 @@ export class ScrollToTop extends LitElement {
   //When the user clicks on the button, scroll to the top of the document
   topFunction() {
     console.log("called top function");
-    document.body.scrollTop = 0; // For Chrome, Safari and Opera
-    document.documentElement.scrollTop = 0; // For IE and Firefox
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 }

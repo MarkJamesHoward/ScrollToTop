@@ -1,16 +1,19 @@
 {
   "name": "scroll-to-top-wc",
-  "version": "0.3.6",
+  "version": "0.3.9",
   "description": "scroll page up",
   "main": "src/index.ts",
+  "license": "MIT",
   "browserslist": [
     "Chrome > 70  "
   ],
-  "scripts": {},
+  "scripts": {
+    "version": "npx @pika/pack"
+  },
   "@pika/pack": {
     "pipeline": [
       [
-        "@pika/plugin-tsp-standard-pkg"
+        "@pika/plugin-ts-standard-pkg"
       ],
       [
         "@pika/plugin-build-web"
@@ -24,6 +27,18 @@
   "dependencies": {
     "lit-element": "^2.2.1"
   },
+  "keywords": [
+    "scroll",
+    "top",
+    "scrolltop",
+    "scroll to top",
+    "scroll top",
+    "scroll up",
+    "move to top",
+    "move top",
+    "scrollTo",
+    "smooth scroll"
+  ],
   "devDependencies": {
     "@pika/cli": "^0.2.0",
     "@pika/pack": "^0.5.0",
