@@ -33,6 +33,6 @@
     "@pika/plugin-ts-standard-pkg": "^0.6.0",
     "@pika/web": "^0.5.3",
     "cypress": "^3.4.1",
-    "typescript": "^3.5.3"
+    "typescript": "^3.6.2"
   }
 }
