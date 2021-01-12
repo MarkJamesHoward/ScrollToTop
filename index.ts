@@ -1,10 +1,10 @@
 import {
-  property,
   LitElement,
-  html,
-  customElement
+  html
   //@ts-ignore
 } from "lit-element";
+
+import {property, customElement} from "lit-element/decorators.js"
 
 @customElement("scroll-to-top-wc")
 export class ScrollToTop extends LitElement {
