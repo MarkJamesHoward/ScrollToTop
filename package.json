@@ -4,9 +4,6 @@
   "description": "scroll page up",
   "main": "src/index.ts",
   "license": "MIT",
-  "browserslist": [
-    "Chrome > 70  "
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/markjameshoward/scrolltotop"
