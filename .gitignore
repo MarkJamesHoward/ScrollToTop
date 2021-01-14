@@ -1,6 +1,4 @@
 /node_modules/
-/demo/.cache
-/demo/dist
-/pkg
-.parcel-cache
+/build
+/_snowpack
 
