@@ -1,8 +1,8 @@
 {
   "name": "scroll-to-top-wc",
-  "version": "0.3.17",
+  "version": "0.3.18",
   "description": "scroll page up",
-  "main": "src/index.ts",
+  "main": "./index.ts",
   "license": "MIT",
   "browserslist": [
     "Chrome > 70  "

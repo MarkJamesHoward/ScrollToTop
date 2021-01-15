@@ -3,7 +3,7 @@ import {
   html,
   property, customElement
   //@ts-ignore
-} from "lit-element";
+} from 'https://cdn.skypack.dev/lit-element';
 
 @customElement("scroll-to-top-wc")
 export class ScrollToTop extends LitElement {
@@ -14,7 +14,7 @@ export class ScrollToTop extends LitElement {
   showToast: Boolean = false;
 
   render() {
-    return html`
+    return html` 
       <style>
         :host {
           position: fixed;
