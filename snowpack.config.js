@@ -1,8 +1,6 @@
 
 module.exports = {
-    "mount": {
-        "src": "/"
-      }
+    
   };
 
   
