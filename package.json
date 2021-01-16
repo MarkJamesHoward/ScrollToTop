@@ -12,7 +12,7 @@
     "url": "https://github.com/markjameshoward/scrolltotop"
   },
   "dependencies": {
-    "lit-element": "^2.4.0",
+    "lit-element": "^2.4.0"
   },
   "keywords": [
     "scroll",
