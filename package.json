@@ -11,6 +11,7 @@
   "dependencies": {
     "lit-element": "^2.4.0"
   },
+  "types": "./types/index.d.ts",
   "exports": {
     "import": "./index.js",
     "default": "./index.js"
