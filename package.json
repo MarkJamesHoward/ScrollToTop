@@ -11,6 +11,10 @@
   "dependencies": {
     "lit-element": "^2.4.0"
   },
+    "exports": {
+      "import": "./index.js",
+      "default": "./index.js"
+    },
   "keywords": [
     "scroll",
     "top",
