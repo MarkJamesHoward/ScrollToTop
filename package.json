@@ -1,12 +1,9 @@
 {
   "name": "scroll-to-top-wc",
-  "version": "0.3.21",
+  "version": "0.3.22",
   "description": "scroll page up",
-  "main": "./index.ts",
+  "main": "./index.js",
   "license": "MIT",
-  "browserslist": [
-    "Chrome > 70  "
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/markjameshoward/scrolltotop"
@@ -14,6 +11,10 @@
   "dependencies": {
     "lit-element": "^2.4.0"
   },
+    "exports": {
+      "import": "./index.js",
+      "default": "./index.js"
+    },
   "keywords": [
     "scroll",
     "top",
