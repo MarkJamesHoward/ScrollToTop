@@ -40,11 +40,13 @@ The text displayed by the toast notification can be customised using light DOM n
 
 ### Smooth Scrolling:
 
-In order for the page to scroll to the top in a smooth fasion you will need to apply the below CSS to the document body:
+In order for the page to scroll to the top in a smooth fasion you *may* need to apply the below CSS to the document body:
 
 ```
 scroll-behavior: smooth;
 ```
+
+This works automatically in Chrome so no need to add!
 
 ### Styling
 
@@ -86,18 +88,3 @@ cd \demo
 parcel index.html
 ```
 
-### UNPKG
-
-To include this component via Unpkg please use one of the below links:
-
-#### Web optimsed version
-
-[UnPkg Link](https://unpkg.com/scroll-to-top-wc@latest/dist-web/index.js)
-
-#### ES2019 version
-
-[UnPkg Link](https://unpkg.com/scroll-to-top-wc@latest/dist-src/index.js)
-
-### Package Creation:
-
-This package was created using [@Pika/Pack](https://www.pika.dev/blog/introducing-pika-pack/). So we have an unbundled ES2018 and Web optimised versions in the repository. Within the package.json there is a 'module' entry that points to the web optimsed version which should be picked up by bundlers such as Rollup, webpack, parcel etc.
