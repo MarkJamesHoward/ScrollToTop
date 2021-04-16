@@ -4,7 +4,7 @@ import {
   property,
   customElement,
   //@ts-ignore
-} from "lit-element";
+} from 'lit-element'
 
 @customElement("scroll-to-top-wc")
 export class ScrollToTop extends LitElement {

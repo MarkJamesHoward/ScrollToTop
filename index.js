@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { LitElement, html, property, customElement, } from "lit-element";
+import { LitElement, html, property, customElement, } from 'lit-element';
 let ScrollToTop = class ScrollToTop extends LitElement {
     constructor() {
         super(...arguments);
