@@ -4,7 +4,7 @@ import {
   property,
   customElement,
   //@ts-ignore
-} from 'lit-element'
+} from "lit-element";
 
 @customElement("scroll-to-top-wc")
 export class ScrollToTop extends LitElement {
@@ -13,6 +13,8 @@ export class ScrollToTop extends LitElement {
 
   @property()
   showToast: Boolean = false;
+
+  @property() fancy: Boolean = false;
 
   render() {
     return html`
@@ -23,28 +25,28 @@ export class ScrollToTop extends LitElement {
           display: block;
         }
 
-        #toast {
-          height: 50px;
-          width: 100px;
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          background-color: orange;
-          border-radius: 5%;
-          transition: 0.5s all ease-in-out;
-          z-index: 1000;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          cursor: pointer;
-        }
-
         .showToast {
-          display: block;
+          opacity: 0.9;
+          //transition: 1s all ease-in-out;
         }
 
         .hideToast {
-          display: none;
+          visibility: hidden;
+          transform: rotateY(90deg);
+          //transition: 1s all ease-in-out;
+          opacity: 0;
+        }
+
+        .fancy {
+          transition: 1s all ease-in-out;
+        }
+
+        .FlipContainer {
+          perspective: 800px;
+        }
+
+        .card {
+          transform-style: preserve-3d;
         }
 
         .showToast,
@@ -54,16 +56,20 @@ export class ScrollToTop extends LitElement {
           cursor: pointer;
           padding: 1rem;
           border-radius: 1rem;
-          opacity: 0.9;
         }
       </style>
 
-      <div
-        part="container"
-        class="${this.showToast ? "showToast" : "hideToast"}"
-        @click="${this.topFunction}"
-      >
-        <slot name="text">Top</slot>
+      <div class="FlipContainer">
+        <div class="card">
+          <div
+            part="container"
+            class="${this.showToast ? "showToast " : "hideToast "} +
+            ${this.fancy ? " fancy" : " "} "
+            @click="${this.topFunction}"
+          >
+            <slot name="text">Top</slot>
+          </div>
+        </div>
       </div>
     `;
   }
