@@ -1,6 +1,6 @@
 {
   "name": "scroll-to-top-wc",
-  "version": "0.3.28",
+  "version": "0.3.29",
   "description": "scroll page up",
   "main": "./index.js",
   "license": "MIT",
