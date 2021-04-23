@@ -9,6 +9,7 @@
     "url": "https://github.com/markjameshoward/scrolltotop"
   },
   "dependencies": {
+    "lit": "*",
     "lit-element": "^2.4.0"
   },
   "types": "./types/index.d.ts",

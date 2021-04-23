@@ -1,20 +1,19 @@
 import {
   LitElement,
-  html,
-  property,
-  customElement,
-  //@ts-ignore
-} from "lit-element";
+  html
+} from "lit";
+
+import { property, state, customElement} from 'lit/decorators'
 
 @customElement("scroll-to-top-wc")
 export class ScrollToTop extends LitElement {
   @property()
   activatewhen: Number = 200;
 
-  @property()
+  @state()
   showToast: Boolean = false;
 
-  @property() fancy: Boolean = false;
+  @property({type: Boolean}) fancy: Boolean = false;
 
   render() {
     return html`
