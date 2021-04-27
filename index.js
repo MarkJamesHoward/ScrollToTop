@@ -7,12 +7,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { LitElement, html, property, customElement, } from 'lit-element';
+import { LitElement, html } from "lit";
+import { property, state, customElement } from 'lit/decorators';
 let ScrollToTop = class ScrollToTop extends LitElement {
     constructor() {
         super(...arguments);
         this.activatewhen = 200;
         this.showToast = false;
+        this.fancy = false;
     }
     render() {
         return html `
@@ -23,28 +25,28 @@ let ScrollToTop = class ScrollToTop extends LitElement {
           display: block;
         }
 
-        #toast {
-          height: 50px;
-          width: 100px;
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          background-color: orange;
-          border-radius: 5%;
-          transition: 0.5s all ease-in-out;
-          z-index: 1000;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          cursor: pointer;
-        }
-
         .showToast {
-          display: block;
+          opacity: 0.9;
+          //transition: 1s all ease-in-out;
         }
 
         .hideToast {
-          display: none;
+          visibility: hidden;
+          transform: rotateY(90deg);
+          //transition: 1s all ease-in-out;
+          opacity: 0;
+        }
+
+        .fancy {
+          transition: 1s all ease-in-out;
+        }
+
+        .FlipContainer {
+          perspective: 800px;
+        }
+
+        .card {
+          transform-style: preserve-3d;
         }
 
         .showToast,
@@ -54,16 +56,20 @@ let ScrollToTop = class ScrollToTop extends LitElement {
           cursor: pointer;
           padding: 1rem;
           border-radius: 1rem;
-          opacity: 0.9;
         }
       </style>
 
-      <div
-        part="container"
-        class="${this.showToast ? "showToast" : "hideToast"}"
-        @click="${this.topFunction}"
-      >
-        <slot name="text">Top</slot>
+      <div class="FlipContainer">
+        <div class="card">
+          <div
+            part="container"
+            class="${this.showToast ? "showToast " : "hideToast "} +
+            ${this.fancy ? " fancy" : " "} "
+            @click="${this.topFunction}"
+          >
+            <slot name="text">Top</slot>
+          </div>
+        </div>
       </div>
     `;
     }
@@ -93,9 +99,13 @@ __decorate([
     __metadata("design:type", Number)
 ], ScrollToTop.prototype, "activatewhen", void 0);
 __decorate([
-    property(),
+    state(),
     __metadata("design:type", Boolean)
 ], ScrollToTop.prototype, "showToast", void 0);
+__decorate([
+    property({ type: Boolean }),
+    __metadata("design:type", Boolean)
+], ScrollToTop.prototype, "fancy", void 0);
 ScrollToTop = __decorate([
     customElement("scroll-to-top-wc")
 ], ScrollToTop);
