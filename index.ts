@@ -3,7 +3,8 @@ import {
   html
 } from "lit";
 
-import { property, state, customElement} from 'lit/decorators'
+import { property, customElement, state } from 'lit/decorators.js'
+
 
 @customElement("scroll-to-top-wc")
 export class ScrollToTop extends LitElement {
