@@ -3,6 +3,8 @@
   "version": "0.3.32",
   "description": "scroll page up",
   "main": "./index.js",
+  "type": "module",
+  "module": "./index.js",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -12,7 +14,7 @@
     "lit": "*",
     "lit-element": "^2.4.0"
   },
-  "types": "./types/index.d.ts",
+  "types": "index.d.ts",
   "exports": {
     "import": "./index.js",
     "default": "./index.js"
