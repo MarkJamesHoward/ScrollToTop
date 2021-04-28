@@ -96,7 +96,7 @@ export class ScrollToTop extends LitElement {
   topFunction() {
     console.log("called top function");
     
-    let event = new CustomEvent('scrolling-to-top', {
+    let event = new CustomEvent('scrolling', {
       detail: {
         message: 'activated scroll to top',
       },
