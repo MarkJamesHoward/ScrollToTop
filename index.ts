@@ -98,9 +98,12 @@ export class ScrollToTop extends LitElement {
     
     let event = new CustomEvent('scrolling-to-top', {
       detail: {
-        message: 'activated scroll to top'
-      }});
-      this.dispatchEvent(event);
+        message: 'activated scroll to top',
+      },
+      bubbles: true, 
+      composed: true 
+    });
+    this.dispatchEvent(event);
 
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
