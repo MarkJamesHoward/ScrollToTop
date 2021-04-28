@@ -105,6 +105,9 @@ export class ScrollToTop extends LitElement {
     });
     this.dispatchEvent(event);
 
+    let click = new Event('click');
+    this.dispatchEvent(click);
+
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 }
