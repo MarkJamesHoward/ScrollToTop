@@ -5,7 +5,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { LitElement, html } from "lit";
-import { property, state, customElement } from 'lit/decorators';
+import { property, customElement, state } from 'lit/decorators.js';
 let ScrollToTop = class ScrollToTop extends LitElement {
     constructor() {
         super(...arguments);

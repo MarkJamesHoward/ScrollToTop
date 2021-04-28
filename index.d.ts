@@ -3,7 +3,7 @@ export declare class ScrollToTop extends LitElement {
     activatewhen: Number;
     showToast: Boolean;
     fancy: Boolean;
-    render(): import("lit").TemplateResult<1>;
+    render(): import("lit-html").TemplateResult<1>;
     firstUpdated(): void;
     scrollFunction(): void;
     topFunction(): void;
