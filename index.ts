@@ -84,7 +84,7 @@ export class ScrollToTop extends LitElement {
       document.body.scrollTop > this.activatewhen ||
       document.documentElement.scrollTop > this.activatewhen
     ) {
-      //console.log("time to show the toast!");
+      console.log("time to show the toast!");
       this.showToast = true;
     } else {
       // console.log("not showing the toast ");
@@ -95,6 +95,13 @@ export class ScrollToTop extends LitElement {
   //When the user clicks on the button, scroll to the top of the document
   topFunction() {
     console.log("called top function");
+    
+    let event = new CustomEvent('scrolling-to-top', {
+      detail: {
+        message: 'activated scroll to top'
+      }});
+      this.dispatchEvent(event);
+
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 }
