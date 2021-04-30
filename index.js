@@ -5,7 +5,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { LitElement, html } from "lit";
-import { property, customElement, state } from 'lit/decorators.js';
+import { property, customElement, state } from "lit/decorators.js";
 let ScrollToTop = class ScrollToTop extends LitElement {
     constructor() {
         super(...arguments);
@@ -77,7 +77,7 @@ let ScrollToTop = class ScrollToTop extends LitElement {
     scrollFunction() {
         if (document.body.scrollTop > this.activatewhen ||
             document.documentElement.scrollTop > this.activatewhen) {
-            console.log("time to show the toast!");
+            // console.log("time to show the toast!");
             this.showToast = true;
         }
         else {
@@ -87,17 +87,15 @@ let ScrollToTop = class ScrollToTop extends LitElement {
     }
     //When the user clicks on the button, scroll to the top of the document
     topFunction() {
-        console.log("called top function");
-        let event = new CustomEvent('scrolling', {
+        console.log("scroll-to-top-wc: initiating scroll");
+        let event = new CustomEvent("scrolling", {
             detail: {
-                message: 'activated scroll to top',
+                message: "activated scroll to top",
             },
             bubbles: true,
-            composed: true
+            composed: true,
         });
         this.dispatchEvent(event);
-        let click = new Event('click');
-        this.dispatchEvent(click);
         window.scrollTo({ top: 0, behavior: "smooth" });
     }
 };
