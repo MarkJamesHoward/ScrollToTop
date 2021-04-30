@@ -1,10 +1,6 @@
-import {
-  LitElement,
-  html
-} from "lit";
+import { LitElement, html } from "lit";
 
-import { property, customElement, state } from 'lit/decorators.js'
-
+import { property, customElement, state } from "lit/decorators.js";
 
 @customElement("scroll-to-top-wc")
 export class ScrollToTop extends LitElement {
@@ -14,7 +10,7 @@ export class ScrollToTop extends LitElement {
   @state()
   showToast: Boolean = false;
 
-  @property({type: Boolean}) fancy: Boolean = false;
+  @property({ type: Boolean }) fancy: Boolean = false;
 
   render() {
     return html`
@@ -84,7 +80,7 @@ export class ScrollToTop extends LitElement {
       document.body.scrollTop > this.activatewhen ||
       document.documentElement.scrollTop > this.activatewhen
     ) {
-      console.log("time to show the toast!");
+      // console.log("time to show the toast!");
       this.showToast = true;
     } else {
       // console.log("not showing the toast ");
@@ -94,19 +90,17 @@ export class ScrollToTop extends LitElement {
 
   //When the user clicks on the button, scroll to the top of the document
   topFunction() {
-    console.log("called top function");
-    
-    let event = new CustomEvent('scrolling', {
+    console.log("scroll-to-top-wc: initiating scroll");
+
+    let event = new CustomEvent("scrolling", {
       detail: {
-        message: 'activated scroll to top',
+        message: "activated scroll to top",
       },
-      bubbles: true, 
-      composed: true 
+      
+      bubbles: true,
+      composed: true,
     });
     this.dispatchEvent(event);
-
-    let click = new Event('click');
-    this.dispatchEvent(click);
 
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
