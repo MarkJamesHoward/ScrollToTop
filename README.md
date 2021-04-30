@@ -40,7 +40,7 @@ The text displayed by the toast notification can be customised using light DOM n
 
 ### Smooth Scrolling:
 
-In order for the page to scroll to the top in a smooth fasion you *may* need to apply the below CSS to the document body:
+In order for the page to scroll to the top in a smooth fasion you _may_ need to apply the below CSS to the document body:
 
 ```
 scroll-behavior: smooth;
@@ -66,25 +66,17 @@ For browsers that do not support CSS Shadow Parts, the below CSS Custom Properti
 --scroll-top-color
 ```
 
-### Testing
+###Fancy Mode!
 
-Clone the repository with the below:
+We can enable the toast that is shown to be a 3D flip card by adding the 'fancy' attribute as below:
 
-```
-git clone https://github.com/MarkJamesHoward/ScrollToTop.git
-```
+<scroll-to-top-wc fancy></scroll-to-top-wc>
 
-install dependencies
+### Events
 
-```
-npm install
-```
+At the point of initiating the scroll of the page the component with emit a 'scrolling' event which can be hooked into
+in order to provide an visual feeback that is required.
 
-Then open the 'index.html' in the demo folder using parcel
-
-```
-npm i -g parcel
-cd \demo
-parcel index.html
-```
-
+window.addEventListener('onscrolling', (e) => {
+// add your code here as desired
+})
