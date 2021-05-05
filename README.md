@@ -66,17 +66,21 @@ For browsers that do not support CSS Shadow Parts, the below CSS Custom Properti
 --scroll-top-color
 ```
 
-###Fancy Mode!
+### Fancy Mode!
 
 We can enable the toast that is shown to be a 3D flip card by adding the 'fancy' attribute as below:
 
+```
 <scroll-to-top-wc fancy></scroll-to-top-wc>
+```
 
 ### Events
 
 At the point of initiating the scroll of the page the component with emit a 'scrolling' event which can be hooked into
 in order to provide an visual feeback that is required.
 
+```
 window.addEventListener('onscrolling', (e) => {
 // add your code here as desired
 })
+```
