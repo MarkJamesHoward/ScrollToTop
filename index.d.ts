@@ -1,4 +1,5 @@
 import { LitElement } from "lit";
+export declare const tagName = "scroll-to-top-wc";
 export declare class ScrollToTop extends LitElement {
     activatewhen: Number;
     showToast: Boolean;

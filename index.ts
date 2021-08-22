@@ -2,6 +2,8 @@ import { LitElement, html } from "lit";
 
 import { property, customElement, state } from "lit/decorators.js";
 
+export const tagName = 'scroll-to-top-wc'
+
 @customElement("scroll-to-top-wc")
 export class ScrollToTop extends LitElement {
   @property()

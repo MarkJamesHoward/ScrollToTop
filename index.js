@@ -6,6 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { LitElement, html } from "lit";
 import { property, customElement, state } from "lit/decorators.js";
+export const tagName = 'scroll-to-top-wc';
 let ScrollToTop = class ScrollToTop extends LitElement {
     constructor() {
         super(...arguments);
