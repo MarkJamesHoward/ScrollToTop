@@ -54,6 +54,7 @@ export class ScrollToTop extends LitElement {
           cursor: pointer;
           padding: 1rem;
           border-radius: 1rem;
+          border: black;
         }
       </style>
 
