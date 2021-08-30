@@ -54,7 +54,7 @@ let ScrollToTop = class ScrollToTop extends LitElement {
           cursor: pointer;
           padding: 1rem;
           border-radius: 1rem;
-          border: solid 1px black;
+          border:  1px  solid black;
         }
       </style>
 
