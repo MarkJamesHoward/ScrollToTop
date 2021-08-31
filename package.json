@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "prepublishOnly": "npm version patch",
-    "postpublish": "git add . && git commit -m \"update version\" && git push"
+    "postpublish": "git push"
   },
   "module": "./index.js",
   "license": "MIT",
