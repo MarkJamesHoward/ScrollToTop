@@ -1,6 +1,6 @@
 {
   "name": "scroll-to-top-wc",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "scroll page up",
   "main": "./index.js",
   "type": "module",
