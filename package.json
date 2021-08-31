@@ -1,12 +1,12 @@
 {
   "name": "scroll-to-top-wc",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "scroll page up",
   "main": "./index.js",
   "type": "module",
   "scripts": {
     "prepublishOnly": "npm version patch",
-    "postpublish" : "git add . && git commit -m \"update version\" && git push"
+    "postpublish": "git add . && git commit -m \"update version\" && git push"
   },
   "module": "./index.js",
   "license": "MIT",
