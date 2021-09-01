@@ -8,7 +8,6 @@
     "prepublishOnly": "npm version patch",
     "postpublish": "git push"
   },
-  "module": "./index.js",
   "license": "MIT",
   "repository": {
     "type": "git",

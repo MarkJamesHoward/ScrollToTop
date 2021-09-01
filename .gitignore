@@ -2,4 +2,6 @@
 /build
 /_snowpack
 /.snowpack
+/.parcel-cache
+/dist
 
