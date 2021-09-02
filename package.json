@@ -1,14 +1,14 @@
 {
   "name": "scroll-to-top-wc",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "scroll page up",
   "main": "./index.js",
   "type": "module",
   "scripts": {
     "prepublishOnly": "npm version patch",
     "postpublish": "git push",
-    "dev" : "npm run build",
-    "build" : "npx tsc",
+    "dev": "npm run build",
+    "build": "npx tsc",
     "postbuild": "npx parcel index.html"
   },
   "license": "MIT",
