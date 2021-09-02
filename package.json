@@ -6,7 +6,10 @@
   "type": "module",
   "scripts": {
     "prepublishOnly": "npm version patch",
-    "postpublish": "git push"
+    "postpublish": "git push",
+    "dev" : "npm run build",
+    "build" : "npx tsc",
+    "postbuild": "npx parcel index.html"
   },
   "license": "MIT",
   "repository": {

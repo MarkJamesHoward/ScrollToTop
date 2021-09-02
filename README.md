@@ -84,3 +84,12 @@ window.addEventListener('onscrolling', (e) => {
 // add your code here as desired
 })
 ```
+
+
+### Testing
+
+Run the below it order to open the demo page. This will run the typescript compiler and then use the parcel bundler to open the page
+```
+npm run dev
+````
+
