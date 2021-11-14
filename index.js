@@ -6,7 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { LitElement, html } from "lit";
 import { property, customElement, state } from "lit/decorators.js";
-export const tagName = 'scroll-to-top-wc';
+export const tagName = "scroll-to-top-wc";
 let ScrollToTop = class ScrollToTop extends LitElement {
     constructor() {
         super(...arguments);
@@ -54,7 +54,7 @@ let ScrollToTop = class ScrollToTop extends LitElement {
           cursor: pointer;
           padding: 1rem;
           border-radius: 1rem;
-          border:  1px  solid black;
+          border: 1px solid black;
         }
       </style>
 
@@ -89,7 +89,7 @@ let ScrollToTop = class ScrollToTop extends LitElement {
     }
     //When the user clicks on the button, scroll to the top of the document
     topFunction() {
-        console.log("scroll-to-top-wc: initiating scroll");
+        //console.log("scroll-to-top-wc: initiating scroll");
         let event = new CustomEvent("scrolling", {
             detail: {
                 message: "activated scroll to top",
