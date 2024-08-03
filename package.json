@@ -1,8 +1,8 @@
 {
   "name": "scroll-to-top-wc",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "scroll page up",
-  "main" : "./index.js",
+  "main": "./index.js",
   "type": "module",
   "scripts": {
     "prepublishOnly": "npm version patch",
