@@ -7,7 +7,7 @@ export const tagName = "scroll-to-top-wc";
 @customElement("scroll-to-top-wc")
 export class ScrollToTop extends LitElement {
   @property()
-  activatewhen: Number = 200;
+  activatewhen: number = 200;
 
   @state()
   showToast: Boolean = false;
